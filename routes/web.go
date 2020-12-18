@@ -8,7 +8,7 @@ import (
 )
 
 func user(e *gin.Engine) {
-	e.GET("/", controllers.Index)
+	e.GET("/", controllers.Welcome)
 	e.GET("/user", users.Info)
 	e.GET("/orders/detail", controllers.OrdersDetail)
 	e.GET("/news/detail", controllers.NewsDetail)

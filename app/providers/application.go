@@ -12,6 +12,7 @@ var app = []string{
 
 func Application(e *gin.Engine) {
 	// 注意先后顺序
+	View(e)
 	Middleware(e)
 	Route(e)
 }

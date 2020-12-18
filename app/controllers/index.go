@@ -10,3 +10,7 @@ func Index(c *gin.Context) {
 		"news.detail":   "news/detail",
 	})
 }
+
+func Welcome(c *gin.Context) {
+	c.HTML(200, "welcome.tmpl", gin.H{})
+}
