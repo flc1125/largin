@@ -1,4 +1,4 @@
-module github.com/flc1125/go-gin
+module github.com/flc1125/largin
 
 go 1.15
 

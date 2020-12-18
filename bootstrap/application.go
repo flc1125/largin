@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"github.com/flc1125/go-gin/app/providers"
+	"github.com/flc1125/largin/app/providers"
 	"github.com/gin-gonic/gin"
 )
 

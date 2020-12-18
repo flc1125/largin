@@ -1,7 +1,7 @@
 package providers
 
 import (
-	"github.com/flc1125/go-gin/app/middlewares"
+	"github.com/flc1125/largin/app/middlewares"
 	"github.com/gin-gonic/gin"
 )
 

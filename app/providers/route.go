@@ -1,7 +1,7 @@
 package providers
 
 import (
-	"github.com/flc1125/go-gin/routes"
+	"github.com/flc1125/largin/routes"
 	"github.com/gin-gonic/gin"
 )
 

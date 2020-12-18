@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/flc1125/go-gin/bootstrap"
+	"github.com/flc1125/largin/bootstrap"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package users
 
 import (
-	"github.com/flc1125/go-gin/app/models"
+	"github.com/flc1125/largin/app/models"
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
