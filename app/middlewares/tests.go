@@ -1,14 +1,16 @@
 package middlewares
 
 import (
+	"fmt"
+
 	"github.com/gin-gonic/gin"
 )
 
-func Request() gin.HandlerFunc {
+func Tests() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		// req := c.Request
+		req := c.Request
 
-		// fmt.Println(req)
+		fmt.Println(req)
 
 		c.Next()
 	}

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/flc1125/go-gin/app/middlewares"
 	"github.com/flc1125/go-gin/app/providers"
 	"github.com/gin-gonic/gin"
 )
@@ -9,8 +8,7 @@ import (
 func main() {
 	e := gin.Default()
 
-	e.Use(middlewares.Request())
-	providers.Route(e)
+	providers.Application(e)
 
 	e.POST("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
