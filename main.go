@@ -10,12 +10,5 @@ func main() {
 
 	providers.Application(e)
 
-	e.POST("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "success",
-			"query":   "GO语言",
-		})
-	})
-
 	e.Run()
 }
