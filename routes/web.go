@@ -15,6 +15,6 @@ func user(e *gin.Engine) {
 	e.GET("/payments/alipay", payments.Alipay)
 }
 
-func Router(e *gin.Engine) {
+func Web(e *gin.Engine) {
 	user(e)
 }
