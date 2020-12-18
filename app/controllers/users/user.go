@@ -20,6 +20,6 @@ func Info(c *gin.Context) {
 	db.Create(&models.User{User: "tests"})
 
 	c.JSON(200, gin.H{
-		"user": "FLC22",
+		"user": "FLC223",
 	})
 }

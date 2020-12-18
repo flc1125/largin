@@ -1,14 +1,9 @@
 package main
 
 import (
-	"github.com/flc1125/go-gin/app/providers"
-	"github.com/gin-gonic/gin"
+	"github.com/flc1125/go-gin/bootstrap"
 )
 
 func main() {
-	e := gin.Default()
-
-	providers.Application(e)
-
-	e.Run()
+	bootstrap.Application().Run()
 }

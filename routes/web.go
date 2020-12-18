@@ -15,6 +15,18 @@ func user(e *gin.Engine) {
 	e.GET("/payments/alipay", payments.Alipay)
 }
 
+func group(e *gin.Engine) {
+	v1 := e.Group("/v1")
+	{
+		v1.GET("/version", func(c *gin.Context) {
+			c.JSON(200, gin.H{
+				"version": "v1",
+			})
+		})
+	}
+}
+
 func Web(e *gin.Engine) {
 	user(e)
+	group(e)
 }
