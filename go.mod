@@ -1,4 +1,4 @@
-module gin.tests
+module github.com/flc1125/go-gin
 
 go 1.15
 

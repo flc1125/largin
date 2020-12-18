@@ -1,9 +1,9 @@
 package routes
 
 import (
-	"gin.tests/app/controllers"
-	"gin.tests/app/controllers/payments"
-	"gin.tests/app/controllers/users"
+	"github.com/flc1125/go-gin/app/controllers"
+	"github.com/flc1125/go-gin/app/controllers/payments"
+	"github.com/flc1125/go-gin/app/controllers/users"
 	"github.com/gin-gonic/gin"
 )
 

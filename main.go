@@ -1,8 +1,8 @@
 package main
 
 import (
-	"gin.tests/app/middlewares"
-	"gin.tests/routes"
+	"github.com/flc1125/go-gin/app/middlewares"
+	"github.com/flc1125/go-gin/routes"
 	"github.com/gin-gonic/gin"
 )
 
