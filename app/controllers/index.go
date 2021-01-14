@@ -1,6 +1,10 @@
 package controllers
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
 
 func Index(c *gin.Context) {
 	c.JSON(200, gin.H{
@@ -12,5 +16,5 @@ func Index(c *gin.Context) {
 }
 
 func Welcome(c *gin.Context) {
-	c.HTML(200, "welcome.tmpl", gin.H{})
+	c.HTML(http.StatusOK, "welcome.tmpl", gin.H{})
 }
