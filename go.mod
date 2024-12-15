@@ -4,7 +4,7 @@ go 1.15
 
 require (
 	github.com/gin-gonic/gin v1.10.0
-	github.com/go-redis/redis/v8 v8.6.0
+	github.com/go-redis/redis/v8 v8.11.5
 	github.com/joho/godotenv v1.3.0
 	github.com/spf13/viper v1.7.1 // indirect
 	gorm.io/driver/sqlite v1.1.4
