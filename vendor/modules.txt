@@ -75,7 +75,7 @@ github.com/goccy/go-json/internal/errors
 github.com/goccy/go-json/internal/runtime
 # github.com/jinzhu/inflection v1.0.0
 github.com/jinzhu/inflection
-# github.com/jinzhu/now v1.1.1
+# github.com/jinzhu/now v1.1.5
 github.com/jinzhu/now
 # github.com/joho/godotenv v1.3.0
 ## explicit
@@ -89,7 +89,7 @@ github.com/leodido/go-urn
 github.com/leodido/go-urn/scim/schema
 # github.com/mattn/go-isatty v0.0.20
 github.com/mattn/go-isatty
-# github.com/mattn/go-sqlite3 v1.14.5
+# github.com/mattn/go-sqlite3 v1.14.22
 github.com/mattn/go-sqlite3
 # github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
 github.com/modern-go/concurrent
@@ -163,10 +163,10 @@ google.golang.org/protobuf/reflect/protoregistry
 google.golang.org/protobuf/runtime/protoiface
 # gopkg.in/yaml.v3 v3.0.1
 gopkg.in/yaml.v3
-# gorm.io/driver/sqlite v1.1.4
+# gorm.io/driver/sqlite v1.5.7
 ## explicit
 gorm.io/driver/sqlite
-# gorm.io/gorm v1.20.8
+# gorm.io/gorm v1.25.7-0.20240204074919-46816ad31dde
 ## explicit
 gorm.io/gorm
 gorm.io/gorm/callbacks
