@@ -138,7 +138,7 @@ golang.org/x/net/idna
 # golang.org/x/sys v0.20.0
 golang.org/x/sys/cpu
 golang.org/x/sys/unix
-# golang.org/x/text v0.20.0
+# golang.org/x/text v0.15.0
 golang.org/x/text/cases
 golang.org/x/text/internal
 golang.org/x/text/internal/language
@@ -168,13 +168,11 @@ gopkg.in/yaml.v3
 # gorm.io/driver/sqlite v1.5.7
 ## explicit
 gorm.io/driver/sqlite
-# gorm.io/gorm v1.26.0
+# gorm.io/gorm v1.25.12
 ## explicit
 gorm.io/gorm
 gorm.io/gorm/callbacks
 gorm.io/gorm/clause
-gorm.io/gorm/internal/lru
-gorm.io/gorm/internal/stmt_store
 gorm.io/gorm/logger
 gorm.io/gorm/migrator
 gorm.io/gorm/schema

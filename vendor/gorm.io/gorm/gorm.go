@@ -34,11 +34,6 @@ type Config struct {
 	DryRun bool
 	// PrepareStmt executes the given query in cached statement
 	PrepareStmt bool
-	// PrepareStmt cache support LRU expired,
-	// default maxsize=int64 Max value and ttl=1h
-	PrepareStmtMaxSize int
-	PrepareStmtTTL     time.Duration
-
 	// DisableAutomaticPing
 	DisableAutomaticPing bool
 	// DisableForeignKeyConstraintWhenMigrating
@@ -110,8 +105,6 @@ type DB struct {
 type Session struct {
 	DryRun                   bool
 	PrepareStmt              bool
-	PrepareStmtMaxSize       int
-	PrepareStmtTTL           time.Duration
 	NewDB                    bool
 	Initialized              bool
 	SkipHooks                bool
@@ -190,21 +183,16 @@ func Open(dialector Dialector, opts ...Option) (db *DB, err error) {
 
 	if config.Dialector != nil {
 		err = config.Dialector.Initialize(db)
+
 		if err != nil {
 			if db, _ := db.DB(); db != nil {
 				_ = db.Close()
 			}
 		}
-
-		if config.TranslateError {
-			if _, ok := db.Dialector.(ErrorTranslator); !ok {
-				config.Logger.Warn(context.Background(), "The TranslateError option is enabled, but the Dialector %s does not implement ErrorTranslator.", db.Dialector.Name())
-			}
-		}
 	}
 
 	if config.PrepareStmt {
-		preparedStmt := NewPreparedStmtDB(db.ConnPool, config.PrepareStmtMaxSize, config.PrepareStmtTTL)
+		preparedStmt := NewPreparedStmtDB(db.ConnPool)
 		db.cacheStore.Store(preparedStmtDBKey, preparedStmt)
 		db.ConnPool = preparedStmt
 	}
@@ -275,7 +263,7 @@ func (db *DB) Session(config *Session) *DB {
 		if v, ok := db.cacheStore.Load(preparedStmtDBKey); ok {
 			preparedStmt = v.(*PreparedStmtDB)
 		} else {
-			preparedStmt = NewPreparedStmtDB(db.ConnPool, config.PrepareStmtMaxSize, config.PrepareStmtTTL)
+			preparedStmt = NewPreparedStmtDB(db.ConnPool)
 			db.cacheStore.Store(preparedStmtDBKey, preparedStmt)
 		}
 
