@@ -165,7 +165,7 @@ google.golang.org/protobuf/reflect/protoregistry
 google.golang.org/protobuf/runtime/protoiface
 # gopkg.in/yaml.v3 v3.0.1
 gopkg.in/yaml.v3
-# gorm.io/driver/sqlite v1.5.7
+# gorm.io/driver/sqlite v1.6.0
 ## explicit
 gorm.io/driver/sqlite
 # gorm.io/gorm v1.30.0
